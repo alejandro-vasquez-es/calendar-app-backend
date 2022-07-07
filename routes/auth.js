@@ -28,7 +28,6 @@ router.post(
 	[ // middlewares
 		check('email', 'Require a valid email').isEmail(),
 		check('password', 'Require password').notEmpty(),
-		check('password', 'At least 6 characters in password').isLength({ min: 6 }),
 		fieldValidators
 	],
 	loginUser
